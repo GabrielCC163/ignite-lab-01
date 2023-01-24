@@ -5,6 +5,7 @@
 - Apache Kafka
 - Next.js
 - Apollo Client (GraphQL)
+- Auth0
 
 ## Funcionalidades
 
@@ -29,9 +30,31 @@
 - [Auth] Acessar conteúdo do curso
 
 ----------------------------------------------------------------
+# Backend
 
-[ ] Importar telas do Tailwind
-[ ] URL de Logout no Auth0
-[ ] Query das minhas matrículas
-[ ] Query de produtos
-[ ] Mutation de realizar matrícula
+Purchases (http://localhost:3333/graphql)
+Classromm (http://localhost:3334/graphql)
+
+# Frontend
+
+Web
+
+# Apollo Federation
+Gateway (http://localhost:3332/graphql)
+
+Enables the front to request only one url (gateway) instead of every backend url.
+Enables query from all backend services:
+
+```
+query {
+    me {
+        purchases {
+            id
+        }
+
+        enrollments {
+            id
+        }
+    }
+}
+```
